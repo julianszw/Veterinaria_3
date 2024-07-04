@@ -1,5 +1,7 @@
 package criterios;
 
+import modelo.Mascota;
+
 public class CriterioMasaje extends Criterio{
     private static CriterioMasaje instancia;
 
@@ -12,7 +14,7 @@ public class CriterioMasaje extends Criterio{
         return instancia;
     }
     @Override
-    public void atenderMascota() {
+    public void atenderMascota(Mascota mascota) {
         
     }
 }
