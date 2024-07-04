@@ -7,7 +7,7 @@ public class CriterioMasaje extends Criterio{
 
     private CriterioMasaje() {}
 
-    public CriterioMasaje getInstance() {
+    public static CriterioMasaje getInstance() {
         if (instancia == null) {
             instancia = new CriterioMasaje();
         }

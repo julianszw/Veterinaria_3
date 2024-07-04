@@ -15,11 +15,15 @@ public class Doctor extends Usuario{
         this.criterio = criterio;
     }
 
+    public void cambiarMascotaAtendida(Mascota mascota) {
+        this.mascotaAtendida = mascota;
+    }
+
     private void modificarCriterio(Criterio criterio) {
         this.criterio = criterio;
     }
 
-    public void atenderMascota(Mascota mascota) {
+    public void atenderMascota() {
         this.criterio.atenderMascota(mascotaAtendida);
         this.colocarCollar(mascotaAtendida);
     }

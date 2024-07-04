@@ -7,7 +7,7 @@ public class CriterioCirujia extends Criterio{
 
     private CriterioCirujia() {}
 
-    public CriterioCirujia getInstance() {
+    public static CriterioCirujia getInstance() {
         if (instancia == null) {
             instancia = new CriterioCirujia();
         }

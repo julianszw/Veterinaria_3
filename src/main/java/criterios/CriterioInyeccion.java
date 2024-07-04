@@ -7,7 +7,7 @@ public class CriterioInyeccion extends Criterio{
 
     private CriterioInyeccion() {}
 
-    public CriterioInyeccion getInstance() {
+    public static CriterioInyeccion getInstance() {
         if (instancia == null) {
             instancia = new CriterioInyeccion();
         }
