@@ -5,8 +5,10 @@ import java.util.ArrayList;
 public class TratamientoCompuesto extends Tratamiento {
     private ArrayList<Tratamiento> tratamientos;
 
-    public TratamientoCompuesto() {
+    public TratamientoCompuesto(String nombre, float precio) {
+        super(nombre, precio);
         this.tratamientos = new ArrayList<>();
+
     }
 
     @Override

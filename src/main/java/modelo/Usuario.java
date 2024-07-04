@@ -15,5 +15,9 @@ public abstract class Usuario {
         this.apellido = apellido;
     }
 
+    public String getDni() {
+        return this.dni;
+    }
+
     public abstract void reaccionar();
 }

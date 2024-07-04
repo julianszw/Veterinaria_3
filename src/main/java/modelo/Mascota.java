@@ -24,6 +24,10 @@ public class Mascota {
         this.suscriptores = new ArrayList<>();
     }
 
+    public Dueno getDueno() {
+        return this.dueno;
+    }
+
     public void comer() {
         Estado nuevoEstado = this.estado.comer();
         if (nuevoEstado != null) {
@@ -45,6 +49,12 @@ public class Mascota {
         }
     }
 
+    private void notificarCambioDeEstado() {
+        for (Usuario suscriptor: suscriptores) {
+            suscriptor.reaccionar();
+        }
+    }
+
     public void colocarCollar(Collar collar) {
         this.collar = collar;
     }
@@ -55,12 +65,6 @@ public class Mascota {
 
     public boolean desuscribir(Usuario usuario) {
         return this.suscriptores.remove(usuario);
-    }
-
-    private void notificarCambioDeEstado() {
-        for (Usuario suscriptor: suscriptores) {
-            suscriptor.reaccionar();
-        }
     }
 
 }
