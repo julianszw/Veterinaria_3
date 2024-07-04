@@ -21,15 +21,16 @@ public class Doctor extends Usuario{
 
     public void atenderMascota(Mascota mascota) {
         this.criterio.atenderMascota(mascotaAtendida);
+        this.colocarCollar(mascotaAtendida);
     }
 
-    public void aplicarTratamientos(Tratamiento tratamiento, int cantidad) {
+    public void aplicarTratamiento(Tratamiento tratamiento, int cantidad) {
         String dniDueno = this.mascotaAtendida.getDueno().getDni();
         ItemFactura itemFactura = new ItemFactura(tratamiento, cantidad);
         this.clinica.agregarItemFactura(itemFactura, dniDueno);
     }
 
-    private void colocarCollar() {
+    private void colocarCollar(Mascota mascotaAtendida) {
         if (this.mascotaAtendida != null) {
             this.mascotaAtendida.colocarCollar(this.clinica.obtenerCollarDelDia());
         }
